@@ -1,38 +1,38 @@
-body, html {
+body {
   height: 100vh;
-  background-color: #f3f4f6;
   margin:0;
+  padding:0;
+  background-color: bisque;
+  box-sizing: border-box;
   }
 
 .container {
   text-align: center;
   height: 100%;
   padding: 20px;
-  box-sizing: border-box;
-}
-
-.container {
-  background-color: #e1e6ec;
   display: grid;
   grid-template-columns: 250px 3fr;
-  grid-template-rows: 1fr 5fr;
-
+  grid-template-rows: 1fr 3fr;
 }
 
-
+h3 {
+  font-size:18px;
+  text-align: left;
+  margin: 10px 20px;
+}
 
 .container div {
-  margin-top:10px;
   padding: 10px;
   font-size: 32px;
-  font-family: Helvetica;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .container .article {
   display: grid;
-  grid-template-columns: repeat(2, 250px);
-  grid-template-rows: repeat(2, 200px);
+  grid-template-columns: repeat(2,250px);
+  grid-template-rows: repeat(2,250px);
   gap:20px;
+  padding: 20px 20px;
   
   }
 
@@ -41,14 +41,16 @@ body, html {
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
+  height:100vh;
 }
 
 .container .small-article .box  {
-  padding:80px;
+  padding:10px 10px;
+  margin-top:30px;
 }
 
 
-a, i {
+.title,a, i {
   text-shadow: 1px 2px 2px black;
 }
 .box {
@@ -56,7 +58,7 @@ a, i {
   border-radius: 10px;
   padding:10px;
   box-shadow: 3px 3px 3px rgba(0,0,0.6);
-  border-left: 5px solid #fb923c;
+  border-left: 5px solid #e08020;
   }
 
   .box p {
@@ -67,13 +69,26 @@ a, i {
 }
 
 .header {
+  position: relative;
   background-color:#f3f4f6;
   grid-column: 2 / 4;
   display:flex;
   justify-self: space-between;
   align-items: center;
-  gap:50px;
-  box-shadow: 0px 4px 4px rgba(0,0,0.6)
+  gap:500px;
+  box-shadow: 0px 4px 4px rgba(0,0,0.6);
+  height: 200px;
+}
+
+.header img {
+  position:absolute;
+  height:50px;
+  width:50px;
+  border-radius:50%;
+  margin:20px 10px;
+  left:520px;
+  bottom:80px;
+
 }
 
 .header .search {
@@ -82,9 +97,19 @@ a, i {
 }
 
 .header input {
-  width:300px;
+  width:400px;
   border:none;
   border-radius: 50px;
+  box-shadow: 5px 5px 5px black;
+  background-color:bisque;;
+  opacity: 0.8;
+}
+
+.header .search, .header .input {
+  position:absolute;
+  top:20px;
+  left:20px;
+
 }
 .header button {
   padding:10px 30px;
@@ -94,19 +119,26 @@ a, i {
   box-shadow: 5px 5px 5px black;
 }
 
-.header input {
-  box-shadow: 5px 5px 5px black;
 
-}
 .header button a {
   text-decoration: none;
   color:#f3f4f6;
 }
 
 .sidebar {
+  position: relative;
   background-color:#60a5fa;
   grid-row: 1/ 4;
   color:#f3f4f6;
+}
+
+.sidebar img {
+  position: absolute;
+  height:50px;
+  width:50px;
+  left:0;
+  top:20px;
+
 }
 
 .sidebar .links {
@@ -128,3 +160,15 @@ a, i {
 }
 
 
+.box:hover{
+background-color: #e08020;
+transform:scale(1.02);
+}
+
+button:hover, input:hover{
+  background-color: #e08020;
+}
+
+a:hover {
+color: #e08020;
+}
